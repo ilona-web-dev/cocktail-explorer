@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { searchCocktailsByName } from './api/cocktailDb';
 import type { CocktailDbDrink } from './api/types';
+import RandomCocktails from './components/RandomCocktails';
 
 export default function HomePage() {
    const [query, setQuery] = useState('');
@@ -64,6 +65,7 @@ export default function HomePage() {
                ))}
             </ul>
          )}
+         <RandomCocktails />
       </div>
    );
 }
