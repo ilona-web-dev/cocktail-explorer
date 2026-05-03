@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { getRandomCocktail } from '../api/cocktailDb';
 import type { CocktailDbDrink } from '../api/types';
+import CocktailList from './CocktailList';
 
 export default function RandomCocktails() {
    const [status, setStatus] = useState<'idle' | 'loading'>('idle');
@@ -64,15 +64,8 @@ export default function RandomCocktails() {
             )}
             {error && <p role="alert">{error}</p>}
             {status === 'loading' && <p aria-live="polite">Loading...</p>}
-            <ul>
-               {randomDrinks.map((drink) => (
-                  <li key={drink.idDrink}>
-                     <Link to={`/cocktail/${drink.idDrink}`}>
-                        {drink.strDrink}
-                     </Link>
-                  </li>
-               ))}
-            </ul>
+
+            <CocktailList drinks={randomDrinks} />
          </div>
       </>
    );
