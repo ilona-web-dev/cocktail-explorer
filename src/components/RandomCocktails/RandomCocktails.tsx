@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { getRandomCocktail } from '../api/cocktailDb';
-import type { CocktailDbDrink } from '../api/types';
-import CocktailList from './CocktailList';
+import styles from './RandomCocktails.module.css';
+import { getRandomCocktail } from '../../api/cocktailDb';
+import type { CocktailDbDrink } from '../../api/types';
+import CocktailList from '../CocktailList/CocktailList';
 
 export default function RandomCocktails() {
    const [status, setStatus] = useState<'idle' | 'loading'>('idle');
@@ -51,22 +52,31 @@ export default function RandomCocktails() {
    }
 
    return (
-      <>
+      <div className={styles.wrapper}>
          <h2>Random cocktails</h2>
          <div>
-            <button disabled={status === 'loading'} onClick={handlerShowRandom}>
-               Show 3 random cocktails
-            </button>
-            {randomDrinks.length > 0 && (
-               <button disabled={status === 'loading'} onClick={handlerSeeMore}>
-                  See more (+3)
+            <div className={styles.controls}>
+               <button
+                  disabled={status === 'loading'}
+                  onClick={handlerShowRandom}>
+                  Show 3 random cocktails
                </button>
-            )}
-            {error && <p role="alert">{error}</p>}
-            {status === 'loading' && <p aria-live="polite">Loading...</p>}
+               {randomDrinks.length > 0 && (
+                  <button
+                     disabled={status === 'loading'}
+                     onClick={handlerSeeMore}>
+                     See more (+3)
+                  </button>
+               )}
+            </div>
+
+            <div className={styles.status}>
+               {error && <p role="alert">{error}</p>}
+               {status === 'loading' && <p aria-live="polite">Loading...</p>}
+            </div>
 
             <CocktailList drinks={randomDrinks} />
          </div>
-      </>
+      </div>
    );
 }

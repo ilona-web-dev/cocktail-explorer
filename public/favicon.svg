@@ -1,0 +1,41 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cocktail Explorer favicon">
+  <defs>
+    <linearGradient id="accent" x1="96" y1="112" x2="416" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="rgb(21,93,251)"/>
+      <stop offset="1" stop-color="rgb(200,0,222)"/>
+    </linearGradient>
+    <linearGradient id="accentSoft" x1="140" y1="170" x2="370" y2="315" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="rgb(21,93,251)" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="rgb(200,0,222)" stop-opacity="0.95"/>
+    </linearGradient>
+    <filter id="shadow" x="56" y="70" width="400" height="390" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="rgb(44,20,120)" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <!-- glass bowl -->
+    <path d="M105 133H407L289 278C271 300 241 300 223 278L105 133Z" fill="url(#accentSoft)"/>
+    <path d="M105 133H407L289 278C271 300 241 300 223 278L105 133Z" stroke="url(#accent)" stroke-width="22" stroke-linejoin="round"/>
+
+    <!-- liquid wave -->
+    <path d="M173 210C206 183 235 227 267 203C293 184 319 191 344 209L286 270C270 287 242 287 226 270L173 210Z" fill="rgba(255,255,255,0.24)"/>
+
+    <!-- stem -->
+    <path d="M256 289V392" stroke="url(#accent)" stroke-width="24" stroke-linecap="round"/>
+
+    <!-- base -->
+    <path d="M177 414H335" stroke="url(#accent)" stroke-width="24" stroke-linecap="round"/>
+
+    <!-- stirrer -->
+    <path d="M313 188L375 93" stroke="url(#accent)" stroke-width="22" stroke-linecap="round"/>
+    <circle cx="385" cy="78" r="30" fill="url(#accent)"/>
+
+    <!-- olive -->
+    <ellipse cx="315" cy="194" rx="36" ry="24" transform="rotate(-15 315 194)" fill="url(#accent)"/>
+
+    <!-- bubbles/highlights -->
+    <circle cx="243" cy="237" r="11" fill="white" fill-opacity="0.92"/>
+    <circle cx="221" cy="256" r="7" fill="white" fill-opacity="0.82"/>
+  </g>
+</svg>

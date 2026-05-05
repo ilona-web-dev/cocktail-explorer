@@ -1,0 +1,84 @@
+.app {
+   --accent1: rgba(21, 93, 251, 1);
+   --accent2: rgba(200, 0, 222, 1);
+   --bg: #fbfbff;
+   --bg2: #eef2ff;
+   --text: #101828;
+   --border: rgba(16, 24, 40, 0.12);
+   --card: #ffffff;
+   min-height: 100vh;
+   background: var(--bg);
+   color: var(--text);
+}
+
+.container {
+   display: grid;
+   grid-template-rows: auto 1fr auto;
+   min-height: 100vh;
+
+   max-width: 960px;
+   margin: 0 auto;
+   padding: 24px;
+}
+
+:global(*),
+:global(*::before),
+:global(*::after) {
+   box-sizing: border-box;
+}
+
+:global(body) {
+   margin: 0;
+   font-family:
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      Segoe UI,
+      Roboto,
+      Helvetica,
+      Arial,
+      'Apple Color Emoji',
+      'Segoe UI Emoji';
+   line-height: 1.5;
+}
+
+:global(a:focus-visible),
+:global(button:focus-visible),
+:global(input:focus-visible) {
+   outline: 3px solid var(--accent1);
+   outline-offset: 2px;
+   border-radius: 8px;
+}
+
+:global(button) {
+   border: 0;
+   background: linear-gradient(90deg, var(--accent1), var(--accent2));
+   color: var(--card);
+   padding: 13px 16px;
+   border-radius: 12px;
+   font-weight: 600;
+   cursor: pointer;
+}
+
+:global(button:disabled) {
+   opacity: 0.6;
+   cursor: not-allowed;
+}
+
+:global(input) {
+   border: 1px solid var(--border);
+   border-radius: 12px;
+   padding: 10px 12px;
+}
+
+:global(header a) {
+   color: var(--text);
+   text-decoration: none;
+   font-weight: 800;
+   letter-spacing: 0.2px;
+}
+
+:global(header a:hover) {
+   color: var(--accent1);
+   text-decoration: underline;
+}

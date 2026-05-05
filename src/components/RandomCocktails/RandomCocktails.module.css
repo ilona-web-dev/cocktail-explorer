@@ -1,0 +1,19 @@
+.wrapper {
+   background-color: var(--bg2);
+   padding: 20px 10px 10px;
+   border-radius: 15px;
+   margin-top: 30px;
+   text-align: center;
+}
+
+.status {
+   min-height: 24px;
+}
+
+.controls {
+   display: flex;
+   gap: 10px;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+}
